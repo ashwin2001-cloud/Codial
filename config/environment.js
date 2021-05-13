@@ -55,7 +55,7 @@ const production= {
     },
     google_client_id: process.env.CODIAL_GOOGLE_CLIENT_ID,
     google_client_secret: process.env.CODIAL_GOOGLE_CLIENT_SECRET,
-    google_callback_URL: process.env.CODIAL_GOOGLE_CALLBACK_URL,
+    google_callback_URL: "http://codialashwin.tech/users/auth/google/callback",
     jwt_secret: process.env.CODIAL_JWT_SECRET,
     morgan: {
         mode: 'combined',
