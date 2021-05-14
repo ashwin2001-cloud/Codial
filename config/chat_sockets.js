@@ -3,7 +3,7 @@ module.exports.chatSockets= function(socketServer){
     //we require socket-io here, and not in index.js file
     let io= require('socket.io')(socketServer, {
         cors: {
-          origin: "http://codialashwin.tech",
+          origin: "http://localhost:8001",
           methods: ["GET", "POST"]
         }
       });
