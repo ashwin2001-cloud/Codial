@@ -13,30 +13,30 @@ const accessLogStream= rfs.createStream('access.log', {
     path: logDirectory
 });
 
-const development= {
-    name: 'development',
-    asset_path: '/assets',
-    session_cookie_key: /* enter session cookie key */,
-    db: 'codial_db',
-    smtp: {
-        service: 'gmail',
-        host: 'smtp.gmail.com',
-        port: 587,
-        secure: false,
-        auth: {
-            user: /* enter gmail id */,
-            pass: /* enter password */
-        }
-    },
-    google_client_id: /* enter google client id */,
-    google_client_secret: /* enter google client secret */,
-    google_callback_URL: /* enter google callback url */,
-    jwt_secret: /* enter jwt secret */,
-    morgan: {
-        mode: 'dev',
-        options: {stream: accessLogStream}
-    }
-}
+// const development= {
+//     name: 'development',
+//     asset_path: '/assets',
+//     session_cookie_key: /* enter session cookie key */,
+//     db: 'codial_db',
+//     smtp: {
+//         service: 'gmail',
+//         host: 'smtp.gmail.com',
+//         port: 587,
+//         secure: false,
+//         auth: {
+//             user: /* enter gmail id */,
+//             pass: /* enter password */
+//         }
+//     },
+//     google_client_id: /* enter google client id */,
+//     google_client_secret: /* enter google client secret */,
+//     google_callback_URL: /* enter google callback url */,
+//     jwt_secret: /* enter jwt secret */,
+//     morgan: {
+//         mode: 'dev',
+//         options: {stream: accessLogStream}
+//     }
+// }
 
 const production= {
     name: 'production',
