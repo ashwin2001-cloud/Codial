@@ -48,23 +48,20 @@
         // concept used is ajax
         // use post._id and not post.id, else ajax function for deleting doesn't work
         return $(`<li id="post-${post._id}">
+        <!-- delete option is visible only if signed in user has written post -->
         <a class="delete-post-button" href="/posts/destroy/${post._id}">X</a>
         ${ post.content }
         <br>
         ${ post.user.name }
+        <br>
         <small>
             <a class="toggle-like-button" data-likes="0" href="/likes/toggle?id=${post._id}&type=Post"> 
                 0 Likes 
             </a>
 
         </small>
-        ${ post.user.name }
         <!-- ${ post.user } -->
         <div id="posts-container">
-            
-            <!-- delete option is visible only if signed in user has written post -->
-
-            <a class="delete-post-button" href="/posts/destroy/${post._id}">X</a>
 
             <form action="/comments/create" method="POST">
                 <input name="content" type="text" placeholder="Type here to add comment...">
