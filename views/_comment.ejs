@@ -5,7 +5,10 @@
     <% } %>
     <!-- <a class="delete-comment-button" href="/comments/destroy/<%=comment.id%>">X</a> -->
     <span style="font-size:20px;"> <%= comment.content %> </span>
+    <br>
     <span style="font-size:15px;"> <%= comment.user.name %> </span>
+    <br>
+    
     <!-- CHANGE -->
     <small>
         <% if(locals.user){ %>
