@@ -20,7 +20,7 @@
         
         <% if(locals.user){ %>
             <form action="/comments/create" id="post-<%= post._id %>-comments-form" method="POST">
-                <input name="content" type="text" placeholder="Type here to add comment...">
+                <input name="content" type="text" placeholder="Write a comment...">
                 <!-- post._id (id of post) is sent to comment.post in the comment schema -->
                 <input type="hidden" name="post" value=<%= post._id %> >
                 <input type="submit" value="Add comment">
