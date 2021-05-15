@@ -11,9 +11,11 @@
         <!-- enctype="multipart/form-data" is used to take files as input -->
         <form action="/users/update/<%=profile_user.id%>" enctype="multipart/form-data" method="POST">
             <input type="text" name="name" placeholder="Your name" required>
+            <br>
             <input type="text" name="email" placeholder="Your email" required>
+            <br>
             <input type="file" name="avatar" placeholder="Profile Picture">
-            <input type="submit">
+            <input type="submit" value="update">
         </form>
     </section>
 <% } %>
