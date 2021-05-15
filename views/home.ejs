@@ -6,9 +6,11 @@
         <h4>Posts</h4>
         
         <% if(locals.user){ %>
-            <p>User</p>
-            <p> <img src="<%= user.avatar %>" alt="<%= user.name %>" style="height:100px;width:100px"> </p>
-            <p> <%= user.name %> </p>
+            <section>
+                <p>User</p>
+                <p> <img src="<%= user.avatar %>" alt="<%= user.name %>" style="height:100px;width:100px"> </p>
+                <p> <%= user.name %> </p>
+            </section>
         <% } %>
     
         <% if(locals.user){ %>
