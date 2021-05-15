@@ -35,7 +35,7 @@ const flash= require('connect-flash');
 const customMWare= require('./config/middleware');
 
 //we want sass to run only in development environment and not in production environment
-if(true){
+if(enc.name == 'development'){
     
     //launching sass-middleware
     app.use(sassMiddleware({
