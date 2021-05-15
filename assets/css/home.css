@@ -1,14 +1,12 @@
 #home-container {
   display: flex;
   height: 100%; }
-  #home-container #user-info {
-    width: 20%; }
   #home-container #feed-posts {
-    width: 55%;
-    padding: 10px;
-    border-left: 1px solid grey; }
+    width: 70%;
+    padding: 10px; }
   #home-container #friends-list {
-    width: 25%;
+    width: 30%;
     padding: 10px;
     border-left: 1px solid grey;
     height: 100%; }
+
