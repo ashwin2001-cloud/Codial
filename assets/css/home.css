@@ -6,7 +6,8 @@
   #home-container #feed-posts {
     width: 50%;
     border-left: 1px solid grey;
-    padding: 10px; }
+    padding: 10px; 
+    padding-left: 30px;}
   #home-container #friends-list {
     width: 24%;
     padding: 10px;
