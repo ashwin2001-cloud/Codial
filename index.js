@@ -11,6 +11,9 @@ const passportLocal= require('./config/passport-local-strategy');
 const passportJWT= require('./config/passport-jwt-strategy');
 const passportGoogle= require('./config/passport-google-oauth2-strategy');
 
+const cors= require('cors');
+app.use(require('cors')())
+
 //for socket.io
 const chatServer= require('http').Server(app);
 const chatSockets= require('./config/chat_sockets').chatSockets(chatServer);
