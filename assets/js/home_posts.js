@@ -50,9 +50,9 @@
         return $(`<li id="post-${post._id}">
         <!-- delete option is visible only if signed in user has written post -->
         <a class="delete-post-button" href="/posts/destroy/${post._id}">X</a>
-        ${ post.content }
+        <span style="font-size:20px;"> ${ post.content } </span>
         <br>
-        ${ post.user.name }
+        <span style="font-size:15px;"> ${ post.user.name } </span>
         <br>
         <small>
             <a class="toggle-like-button" data-likes="0" href="/likes/toggle?id=${post._id}&type=Post"> 
@@ -63,11 +63,11 @@
         <!-- ${ post.user } -->
         <div id="posts-container">
 
-            <form action="/comments/create" method="POST">
+            <form action="/comments/create" method="POST" style="margin-top:10px;">
                 <input name="content" type="text" placeholder="Type here to add comment...">
                 <!-- post._id (id of post) is sent to comment.post in the comment schema -->
                 <input type="hidden" name="post" value=${post._id} >
-                <input type="submit" value="Add comment">
+                <input type="submit" value="Comment">
             </form>
 
         </div>    
