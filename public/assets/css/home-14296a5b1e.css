@@ -1,7 +1,7 @@
 
 #home-container {
   display: flex;
-  height: 100%; }
+  height: auto; }
   #home-container #avatar-container{
     width:20%}
   #home-container #feed-posts {
