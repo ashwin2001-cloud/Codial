@@ -4,8 +4,8 @@
         <a class="delete-comment-button" href="/comments/destroy/<%=comment.id%>">X</a>
     <% } %>
     <!-- <a class="delete-comment-button" href="/comments/destroy/<%=comment.id%>">X</a> -->
-    <%= comment.content %>
-    <%= comment.user.name %>
+    <span style="font-size:20px;"> <%= comment.content %> </span>
+    <span style="font-size:15px;"> <%= comment.user.name %> </span>
     <!-- CHANGE -->
     <small>
         <% if(locals.user){ %>
