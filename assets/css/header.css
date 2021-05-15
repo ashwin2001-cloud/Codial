@@ -1,0 +1,23 @@
+header {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(51, 139, 242, 0.5);
+  color: white;
+  font-size: 17px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  position: fixed; }
+  header p {
+    font-size: 20px;
+    margin-left: 30px; }
+  header ul {
+    display: flex;
+    list-style-type: none;
+    margin-right: 30px; }
+    header ul li {
+      margin: 0px 10px; }
+      header ul li a {
+        color: white;
+        text-decoration: none; }

@@ -1,0 +1,20 @@
+footer{
+    height:90px;
+    width:100%;
+    color: white;
+    background-color:grey;
+    font-size: 20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    div{
+        // border: 1px solid black;
+        height: 22px;
+        margin:3px 10px;
+    }
+
+    #rights{
+        font-size: 18px;
+    }
+}
