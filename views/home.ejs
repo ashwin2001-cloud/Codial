@@ -3,7 +3,13 @@
 
 <div id="home-container">
     <section id="feed-posts">
-        <h4>Posts1</h4>
+        <h4>Posts</h4>
+        
+        <% if(locals.user){ %>
+            <p>User</p>
+            <p> <img src="<%= user.avatar %>" alt="<%= user.name %>" style="height:100px;width:100px"> </p>
+            <p> <%= user.name %> </p>
+        <% } %>
     
         <% if(locals.user){ %>
             <form action="/posts/create" id="new-post-form" method="POST">
