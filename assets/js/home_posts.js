@@ -48,14 +48,16 @@
         // concept used is ajax
         // use post._id and not post.id, else ajax function for deleting doesn't work
         return $(`<li id="post-${post._id}">
+        
+        ${ post.content },
+        ${ post.user.name }
+
         <small>
             <a class="toggle-like-button" data-likes="0" href="/likes/toggle?id=${post._id}&type=Post"> 
                 0 Likes 
             </a>
 
         </small>
-        ${ post.content },
-        ${ post.user.name }
         <!-- ${ post.user } -->
         <div id="posts-container">
             
