@@ -57,8 +57,10 @@ class PostComments{
         return $(`<li id="comment-${comment._id}">
         <!-- delete option is visible only if signed in user has written comment -->
         <a class="delete-comment-button" href="/comments/destroy/${comment._id}">X</a>
-        ${ comment.content }
-        ${ comment.user.name }
+        <span style="font-size:20px;"> ${ comment.content } </span>
+        <br>
+        <span style="font-size:15px;"> ${ comment.user.name } </span>
+        <br>
 
         <small>
             <a class="toggle-like-button" data-likes="0" href="/likes/toggle?id=${comment._id}&type=Comment"> 
