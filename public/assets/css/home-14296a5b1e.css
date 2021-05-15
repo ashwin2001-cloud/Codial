@@ -1,6 +1,7 @@
 
 #home-container {
   display: flex;
+  height: 100%;
 }
   #home-container #avatar-container{
     width:20%}
