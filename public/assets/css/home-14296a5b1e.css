@@ -3,13 +3,13 @@
   display: flex;
   height: 100%; }
   #home-container #avatar-container{
-    width:24%}
+    width:20%}
   #home-container #feed-posts {
     width: 50%;
     border-left: 1px solid grey;
     padding: 10px; }
   #home-container #friends-list {
-    width: 24%;
+    width: 25%;
     padding: 10px;
     border-left: 1px solid grey;
     height: 100%; }
