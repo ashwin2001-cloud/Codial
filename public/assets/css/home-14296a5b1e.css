@@ -2,7 +2,7 @@
 #home-container {
   display: flex;
   height: 100%; }
-  #home-container #feed-posts{
+  #home-container #avatar-container{
     width:24%}
   #home-container #feed-posts {
     width: 50%;
