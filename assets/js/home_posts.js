@@ -64,7 +64,7 @@
         <div id="posts-container">
 
             <form action="/comments/create" method="POST" style="margin-top:10px;">
-                <input name="content" type="text" placeholder="Type here to add comment...">
+                <input name="content" type="text" placeholder="Write a comment...">
                 <!-- post._id (id of post) is sent to comment.post in the comment schema -->
                 <input type="hidden" name="post" value=${post._id} >
                 <input type="submit" value="Comment">
