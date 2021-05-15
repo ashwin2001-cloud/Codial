@@ -1,4 +1,8 @@
 <li id="post-<%= post.id %>" style="margin:5px;">
+    <!-- delete option is visible only if signed in user has written post -->
+        <% if(locals.user && locals.user.id==post.user.id){ %>
+            <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">X</a>
+        <% } %>
     <span style="font-size:20px;"> <%= post.content %> </span>
     <br>
     <span style="font-size:15px;"> <%= post.user.name %> </span>
@@ -13,11 +17,6 @@
     </small>
 
     <div id="posts-container">
-        
-        <!-- delete option is visible only if signed in user has written post -->
-        <% if(locals.user && locals.user.id==post.user.id){ %>
-            <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">X</a>
-        <% } %>
         
         <% if(locals.user){ %>
             <form action="/comments/create" id="post-<%= post._id %>-comments-form" method="POST">
