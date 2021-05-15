@@ -2,7 +2,23 @@
 <link rel="stylesheet" href="<%= assetPath('css/chat_box.css') %>">
 
 <div id="home-container">
+
+    <% if(locals.user){ %>
+        <section id="user-info">
+            <p>User</p>
+            <p>
+                <img src="<%= user.avatar %>" alt="<%= user.name %>" style="height:100px;width:100px">
+            </p>
+            <p> <%= user.name %> </p>    
+        </section>
+        
+    <% } %>
+    
+    <% if(!locals.user){ %>
+        <section id="feed-posts" style="border:none">
+    <% } else{ %>
     <section id="feed-posts">
+        <%}%>
         <h4>Posts</h4>
     
         <% if(locals.user){ %>
