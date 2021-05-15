@@ -1,4 +1,4 @@
-<li id="comment-<%=comment._id%>">
+<li id="comment-<%=comment._id%>" style="margin:5px;">
     <!-- delete option is visible only if signed in user has written comment -->
     <% if(locals.user && locals.user.id==comment.user.id){ %>
         <a class="delete-comment-button" href="/comments/destroy/<%=comment.id%>">X</a>
