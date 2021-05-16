@@ -129,13 +129,16 @@ module.exports.update= async function(req, res){
                 //called when file is uploaded
                 if(req.file){
                     
-                    //check if file is present inside /uploads/users/avatars
-                    if(fs.existsSync(path.join(__dirname, '..', user.avatar))){
-                        //deleting the old file
-                        fs.unlinkSync(path.join(__dirname, '..', user.avatar));
+                    if(user.avatar)
+                    {
+                        let currAvatarPath = path.join(__dirname, '..', user.avatar);
+                        if(fs.existsSync(currAvatarPath))
+                        {
+                            fs.unlinkSync(currAvatarPath);
+                        }
                     }
-                    console.log(req.file);
-                    user.avatar= User.avatarPath + '/' + req.file.filename;
+                    // this is saving the path of the uploaded file into the avatar field in the user
+                    user.avatar = User.avatarPath + '\\' + req.file.filename;
                 }
 
                 //save function should be used when findById is used to update
