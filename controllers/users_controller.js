@@ -130,11 +130,11 @@ module.exports.update= async function(req, res){
                 if(req.file){
                     
                     //check if file is present inside /uploads/users/avatars
-//                     if(fs.existsSync(path.join(__dirname, '..', user.avatar))){
-//                         //deleting the old file
-//                         fs.unlinkSync(path.join(__dirname, '..', user.avatar));
-//                     }
-                    // console.log(req.file);
+                    if(fs.existsSync(path.join(__dirname, '..', user.avatar))){
+                        //deleting the old file
+                        fs.unlinkSync(path.join(__dirname, '..', user.avatar));
+                    }
+                    console.log(req.file);
                     user.avatar= User.avatarPath + '/' + req.file.filename;
                 }
 
